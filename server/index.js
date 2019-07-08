@@ -16,7 +16,7 @@ import users from './interface/users'
 // import cart from './interface/cart'
 
 const app = new Koa()
-const host = process.env.HOST || '127.0.0.1'
+const host = process.env.HOST || 'localhost'
 const port = process.env.PORT || 3000
 
 app.keys = ['mt', 'keyskeys']

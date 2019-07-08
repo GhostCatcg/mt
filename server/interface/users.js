@@ -20,6 +20,7 @@ let router = new Router({
 // 获取redis的客户端
 let Store = new Redis().client
 
+
 // 注册接口
 router.post("/signup", async (ctx) => {
   // 解构赋值
