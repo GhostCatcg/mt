@@ -35,7 +35,7 @@ $ npm i mongoose
 // dbs:"mongodb://127.0.0.1:27017/dbs"
 
 // 链接 MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/dbs",{
+mongoose.connect("mongodb://localhost:27017/dbs",{
    useNewUrlParser: true 
 })
 

@@ -16,7 +16,7 @@ import json from 'koa-json'
 import dbConfig from './dbs/config'
 // 导入passport
 import passport from './interface/utils/passport'
-// 导入接口
+// 导入接口 
 import users from './interface/user'
 const app = new Koa()
 
@@ -44,7 +44,7 @@ async function start() {
   const nuxt = new Nuxt(config)
 
   const {
-    host = process.env.HOST || '127.0.0.1',
+    host = process.env.HOST || 'localhost',
     port = process.env.PORT || 3000
   } = nuxt.options.server
 

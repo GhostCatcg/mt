@@ -1,10 +1,10 @@
 // 数据库配置文件
 
 export default {
-    dbs: 'mongodb://127.0.0.1:27017/student',
+    dbs: 'mongodb://localhost:27017/student',
     redis: {
         get host() {
-            return '127.0.0.1'
+            return 'localhost'
         },
         get port() {
             return 6379
@@ -18,7 +18,7 @@ export default {
             return '1169518718@qq.com'
         },
         get pass() {
-            return '授权码'
+            return 'peczsebyboixbafe'
         },
         get code() {
             return () => {

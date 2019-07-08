@@ -141,6 +141,7 @@ router.post("/signup", async (ctx) => {
 
   // 验证码验证s
   router.post('/verify', async (ctx, next) => {
+    console.log("发送验证码")
     let username = ctx.request.body.username
     const saveExpire = await Store.hget(`nodemail:${username}`, 'expire')
     if (saveExpire && new Date().getTime() - saveExpire < 0) {
