@@ -84,11 +84,11 @@ import CryptoJS from 'crypto-js'
               statusMsg: '',
               error: '',
               ruleForm: {
-                name: '',
+                name: '默认的',
                 code: '',
                 pwd: '',
                 cpwd: '',
-                email: ''
+                email: '1169518718@qq.com'
               },
               rules: {
                 // 饿了么组件表单验证的规则
@@ -128,9 +128,10 @@ import CryptoJS from 'crypto-js'
               }
             }
           },
-          layout: 'blank',
+          layout: 'blank', // 切换头部
           methods: {
             sendMsg: function () {
+              console.log("发送验证码")
               const self = this;
               let namePass
               let emailPass
@@ -139,7 +140,6 @@ import CryptoJS from 'crypto-js'
                 return false
               }
               // 获取当前ruleform对象
-              // 
               this.$refs['ruleForm'].validateField('name', (valid) => {
                 namePass = valid
               })
@@ -156,7 +156,7 @@ import CryptoJS from 'crypto-js'
               if (!namePass && !emailPass) {
                 // 用户名和邮箱都通过
                 // nuxt.config - modules 已经引入axios
-                self.$axios.post('/verify', {
+                self.$axios.post('/users/verify', {
                   // encode 对中文进行编码
                   username: window.encodeURIComponent(self.ruleForm.name),
                   email: self.ruleForm.email
@@ -225,5 +225,7 @@ import CryptoJS from 'crypto-js'
 </script>
 
 <style lang="scss">
+
 @import "@/assets/css/register/index.scss";
+
 </style>

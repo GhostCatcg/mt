@@ -13,7 +13,7 @@ import axios from './utils/axios'
 // 写接口
 // 创建一个路由对象
 let router = new Router({
-  // 路由地址前缀,所有这个文件里面创建的路由前缀都是prefix
+  // 路由地址前缀,这个文件里面创建的所有路由前缀都是prefix
   prefix: "/users"
 })
 
@@ -225,6 +225,14 @@ router.get('/getUser', async (ctx) => {
     }
   }
 })
+
+// 测试接口
+router.get('/test', async (ctx) => {
+  ctx.body="xxx"
+})
+
+
+
 
 // 路由导出
 // export default router
